@@ -6,100 +6,131 @@
 <title>VIDABEVA.arte - Retratos Hechos a Mano</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-  html,body{height:100%;overflow-x:hidden;}
-  body{color:#fff;line-height:1.6;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html,body{height:100%;overflow-x:hidden;}
 
-  /* Video de fondo */
-  #bg-video{
-    position:fixed;top:0;left:0;width:100%;height:100%;
-    object-fit:cover;z-index:-1;filter:brightness(0.6);
-  }
+body{
+  color:#fff;
+  line-height:1.6;
+  position:relative;
+  background-color:#000;
+}
 
-  header{
-    text-align:center;padding:3rem 1rem;
-    background:rgba(0,0,0,0.4);
-  }
-  header img{width:120px;margin-bottom:1rem;}
-  header h1{font-size:3rem;margin-bottom:0.5rem;color:#76b947;}
-  header p{font-size:1.3rem;color:#9cd78b;}
+/* Slider de fondo */
+#slider {
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  z-index:-1;
+  overflow:hidden;
+}
 
-  nav{
-    display:flex;justify-content:center;gap:2rem;
-    padding:1rem 0;background:rgba(0,0,0,0.5);
-  }
-  nav a{color:#fff;text-decoration:none;font-weight:600;transition:0.3s;}
-  nav a:hover{color:#8fcf8f;}
+#slider img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition: opacity 1.5s ease-in-out;
+}
 
-  section{padding:5rem 1rem;max-width:1000px;margin:auto;background:rgba(0,0,0,0.4);border-radius:12px;margin-bottom:2rem;}
-  .intro{text-align:center;margin-bottom:3rem;}
-  .intro h2{font-size:2.5rem;margin-bottom:1rem;color:#76b947;}
-  .intro p{font-size:1.2rem;color:#dff0d8;}
+header{
+  text-align:center;
+  padding:3rem 1rem;
+  background:rgba(0,0,0,0.4);
+}
+header img{width:120px;margin-bottom:1rem;}
+header h1{font-size:3rem;margin-bottom:0.5rem;color:#76b947;}
+header p{font-size:1.3rem;color:#9cd78b;}
 
-  .gallery{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;
-  }
-  .gallery img{width:100%;border-radius:12px;transition:transform 0.3s;border:4px solid #76b947;}
-  .gallery img:hover{transform:scale(1.05);border-color:#8fcf8f;}
+nav{
+  display:flex;justify-content:center;gap:2rem;
+  padding:1rem 0;background:rgba(0,0,0,0.5);
+}
+nav a{color:#fff;text-decoration:none;font-weight:600;transition:0.3s;}
+nav a:hover{color:#8fcf8f;}
 
-  .contact-info{text-align:center;margin-top:1.5rem;}
-  .contact-info a{color:#76b947;text-decoration:none;font-weight:600;}
+section{padding:5rem 1rem;max-width:1000px;margin:auto;background:rgba(0,0,0,0.4);border-radius:12px;margin-bottom:2rem;}
+.intro{text-align:center;margin-bottom:3rem;}
+.intro h2{font-size:2.5rem;margin-bottom:1rem;color:#76b947;}
+.intro p{font-size:1.2rem;color:#dff0d8;}
 
-  footer{text-align:center;padding:2rem 1rem;background:rgba(0,0,0,0.6);}
-  footer p{font-size:0.9rem;color:#fff;}
+.gallery{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;
+}
+.gallery img{width:100%;border-radius:12px;transition:transform 0.3s;border:4px solid #76b947;}
+.gallery img:hover{transform:scale(1.05);border-color:#8fcf8f;}
+
+.contact-info{text-align:center;margin-top:1.5rem;}
+.contact-info a{color:#76b947;text-decoration:none;font-weight:600;}
+
+footer{text-align:center;padding:2rem 1rem;background:rgba(0,0,0,0.6);}
+footer p{font-size:0.9rem;color:#fff;}
 </style>
 </head>
 <body>
 
-  <!-- Video de fondo -->
-  <video autoplay muted loop id="bg-video">
-    <source src="fondo.mp4" type="video/mp4">
-    Tu navegador no soporta video de fondo.
-  </video>
+<!-- Slider de fondo -->
+<div id="slider">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643933356_1536062365188640_3096440630082787588_n.jpg?raw=true" style="opacity:1;">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643895846_1536062291855314_3810060703054554124_n.jpg?raw=true">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643878314_1536062238521986_7256574983220578767_n.jpg?raw=true">
+</div>
 
-  <header>
-    <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/WhatsApp%20Image%202026-03-05%20at%203.24.05%20PM.jpeg?raw=true" alt="Logo VIDABEVA.arte">
-    <h1>VIDABEVA.arte</h1>
-    <p>Retratos personalizados 100% hechos a mano en pintura acrílica</p>
-  </header>
+<header>
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/WhatsApp%20Image%202026-03-05%20at%203.24.05%20PM.jpeg?raw=true" alt="Logo VIDABEVA.arte">
+  <h1>VIDABEVA.arte</h1>
+  <p>Retratos personalizados 100% hechos a mano en pintura acrílica</p>
+</header>
 
-  <nav>
-    <a href="#about">Sobre Nosotros</a>
-    <a href="#gallery">Galería</a>
-    <a href="#contact">Contacto</a>
-  </nav>
+<nav>
+  <a href="#about">Sobre Nosotros</a>
+  <a href="#gallery">Galería</a>
+  <a href="#contact">Contacto</a>
+</nav>
 
-  <section id="about" class="intro">
-    <h2>Sobre VIDABEVA.arte</h2>
-    <p>
-      Realizamos retratos de mascotas, personas y más. Cada obra es única, personalizada y 100% hecha a mano usando pintura acrílica.
-      Capturamos la esencia de tus recuerdos y los transformamos en arte que llena de vida tu hogar.
-    </p>
-  </section>
+<section id="about" class="intro">
+  <h2>Sobre VIDABEVA.arte</h2>
+  <p>
+    Realizamos retratos de mascotas, personas y más. Cada obra es única, personalizada y 100% hecha a mano usando pintura acrílica.
+    Capturamos la esencia de tus recuerdos y los transformamos en arte que llena de vida tu hogar.
+  </p>
+</section>
 
-  <section id="gallery">
-    <h2 style="text-align:center;margin-bottom:2rem;">Galería de Obras</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/400x400?text=Mascota+1" alt="Cuadro de mascota">
-      <img src="https://via.placeholder.com/400x400?text=Persona+1" alt="Retrato personalizado">
-      <img src="https://via.placeholder.com/400x400?text=Mascota+2" alt="Cuadro de mascota">
-      <img src="https://via.placeholder.com/400x400?text=Pintura+1" alt="Pintura artística">
-    </div>
-  </section>
+<section id="gallery">
+  <h2 style="text-align:center;margin-bottom:2rem;">Galería de Obras</h2>
+  <div class="gallery">
+    <img src="https://via.placeholder.com/400x400?text=Mascota+1" alt="Cuadro de mascota">
+    <img src="https://via.placeholder.com/400x400?text=Persona+1" alt="Retrato personalizado">
+    <img src="https://via.placeholder.com/400x400?text=Mascota+2" alt="Cuadro de mascota">
+    <img src="https://via.placeholder.com/400x400?text=Pintura+1" alt="Pintura artística">
+  </div>
+</section>
 
-  <section id="contact">
-    <h2 style="text-align:center;margin-bottom:1rem;">Contacto</h2>
-    <div class="contact-info">
-      <p>Instagram: <a href="https://instagram.com/vidabeva.arte.ofi" target="_blank">@vidabeva.arte.ofi</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/VIDABEVA.arte" target="_blank">VIDABEVA.arte</a></p>
-      <p>Teléfono: 7091 8104</p>
-      <p>Email: <a href="mailto:vidabeva@hotmail.com">vidabeva@hotmail.com</a></p>
-    </div>
-  </section>
+<section id="contact">
+  <h2 style="text-align:center;margin-bottom:1rem;">Contacto</h2>
+  <div class="contact-info">
+    <p>Instagram: <a href="https://instagram.com/vidabeva.arte.ofi" target="_blank">@vidabeva.arte.ofi</a></p>
+    <p>Facebook: <a href="https://www.facebook.com/VIDABEVA.arte" target="_blank">VIDABEVA.arte</a></p>
+    <p>Teléfono: 7091 8104</p>
+    <p>Email: <a href="mailto:vidabeva@hotmail.com">vidabeva@hotmail.com</a></p>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2026 VIDABEVA.arte | Retratos hechos a mano con pasión</p>
-  </footer>
+<footer>
+  <p>&copy; 2026 VIDABEVA.arte | Retratos hechos a mano con pasión</p>
+</footer>
+
+<script>
+// Slider automático
+let slides = document.querySelectorAll('#slider img');
+let current = 0;
+setInterval(() => {
+  slides[current].style.opacity = 0;
+  current = (current + 1) % slides.length;
+  slides[current].style.opacity = 1;
+}, 5000); // cambia cada 5 segundos
+</script>
 
 </body>
 </html>
