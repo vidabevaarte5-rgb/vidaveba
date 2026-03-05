@@ -9,76 +9,157 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 html,body{height:100%;overflow-x:hidden;}
 
-body{
-  color:#fff;
+/* Fondo tipo collage */
+body {
+  position: relative;
+  color: #fff;
   line-height:1.6;
-  position:relative;
-  background-color:#000;
+  background: #000;
 }
 
-/* Slider de fondo */
-#slider {
-  position:fixed;
+#background {
+  position: fixed;
   top:0; left:0;
   width:100%; height:100%;
   z-index:-1;
-  overflow:hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
 }
 
-#slider img{
-  position:absolute;
+#background img {
   width:100%;
   height:100%;
   object-fit:cover;
-  opacity:0;
-  transition: opacity 1.5s ease-in-out;
+  opacity:0.7;
+  transition: transform 0.5s;
 }
 
-header{
+#background img:hover {
+  transform: scale(1.1);
+  opacity:0.9;
+}
+
+header {
   text-align:center;
   padding:3rem 1rem;
-  background:rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4);
 }
-header img{width:120px;margin-bottom:1rem;}
-header h1{font-size:3rem;margin-bottom:0.5rem;color:#76b947;}
-header p{font-size:1.3rem;color:#9cd78b;}
 
-nav{
-  display:flex;justify-content:center;gap:2rem;
-  padding:1rem 0;background:rgba(0,0,0,0.5);
+header img {
+  width:120px;
+  margin-bottom:1rem;
 }
-nav a{color:#fff;text-decoration:none;font-weight:600;transition:0.3s;}
-nav a:hover{color:#8fcf8f;}
 
-section{padding:5rem 1rem;max-width:1000px;margin:auto;background:rgba(0,0,0,0.4);border-radius:12px;margin-bottom:2rem;}
-.intro{text-align:center;margin-bottom:3rem;}
-.intro h2{font-size:2.5rem;margin-bottom:1rem;color:#76b947;}
-.intro p{font-size:1.2rem;color:#dff0d8;}
-
-.gallery{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;
+header h1 {
+  font-size:3rem;
+  margin-bottom:0.5rem;
+  color:#76b947;
 }
-.gallery img{width:100%;border-radius:12px;transition:transform 0.3s;border:4px solid #76b947;}
-.gallery img:hover{transform:scale(1.05);border-color:#8fcf8f;}
 
-.contact-info{text-align:center;margin-top:1.5rem;}
-.contact-info a{color:#76b947;text-decoration:none;font-weight:600;}
+header p {
+  font-size:1.3rem;
+  color:#9cd78b;
+}
 
-footer{text-align:center;padding:2rem 1rem;background:rgba(0,0,0,0.6);}
-footer p{font-size:0.9rem;color:#fff;}
+nav {
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  padding:1rem 0;
+  background:rgba(0,0,0,0.5);
+}
+
+nav a {
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+nav a:hover {
+  color:#8fcf8f;
+}
+
+section {
+  padding:5rem 1rem;
+  max-width:1000px;
+  margin:auto;
+  background:rgba(0,0,0,0.5);
+  border-radius:12px;
+  margin-bottom:2rem;
+}
+
+.intro {
+  text-align:center;
+  margin-bottom:3rem;
+}
+
+.intro h2 {
+  font-size:2.5rem;
+  margin-bottom:1rem;
+  color:#76b947;
+}
+
+.intro p {
+  font-size:1.2rem;
+  color:#dff0d8;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1.5rem;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:12px;
+  transition:transform 0.3s;
+  border:4px solid #76b947;
+}
+
+.gallery img:hover {
+  transform:scale(1.05);
+  border-color:#8fcf8f;
+}
+
+.contact-info {
+  text-align:center;
+  margin-top:1.5rem;
+}
+
+.contact-info a {
+  color:#76b947;
+  text-decoration:none;
+  font-weight:600;
+}
+
+footer {
+  text-align:center;
+  padding:2rem 1rem;
+  background:rgba(0,0,0,0.6);
+}
+
+footer p {
+  font-size:0.9rem;
+  color:#fff;
+}
 </style>
 </head>
 <body>
 
-<!-- Slider de fondo -->
-<div id="slider">
-  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643933356_1536062365188640_3096440630082787588_n.jpg?raw=true" style="opacity:1;">
+<!-- Fondo tipo collage con tus fotos -->
+<div id="background">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643933356_1536062365188640_3096440630082787588_n.jpg?raw=true">
   <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643895846_1536062291855314_3810060703054554124_n.jpg?raw=true">
   <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643878314_1536062238521986_7256574983220578767_n.jpg?raw=true">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643933356_1536062365188640_3096440630082787588_n.jpg?raw=true">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/643895846_1536062291855314_3810060703054554124_n.jpg?raw=true">
 </div>
 
 <header>
-  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/WhatsApp%20Image%202026-03-05%20at%203.24.05%20PM.jpeg?raw=true" alt="Logo VIDABEVA.arte">
+  <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/ChatGPT%20Image%20Mar%205%2C%202026%2C%2004_05_41%20PM.png?raw=true" alt="Logo VIDABEVA.arte">
   <h1>VIDABEVA.arte</h1>
   <p>Retratos personalizados 100% hechos a mano en pintura acrílica</p>
 </header>
@@ -120,17 +201,6 @@ footer p{font-size:0.9rem;color:#fff;}
 <footer>
   <p>&copy; 2026 VIDABEVA.arte | Retratos hechos a mano con pasión</p>
 </footer>
-
-<script>
-// Slider automático
-let slides = document.querySelectorAll('#slider img');
-let current = 0;
-setInterval(() => {
-  slides[current].style.opacity = 0;
-  current = (current + 1) % slides.length;
-  slides[current].style.opacity = 1;
-}, 5000); // cambia cada 5 segundos
-</script>
 
 </body>
 </html>
