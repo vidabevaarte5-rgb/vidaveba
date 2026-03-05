@@ -6,67 +6,60 @@
 <title>VIDABEVA.arte - Retratos Hechos a Mano</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-  body, html {height:100%; overflow-x:hidden;}
-  body {color:#fff; line-height:1.6;}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+  html,body{height:100%;overflow-x:hidden;}
+  body{color:#fff;line-height:1.6;}
 
   /* Video de fondo */
-  #bg-video {
-    position: fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    object-fit:cover;
-    z-index:-1;
-    filter: brightness(0.6);
+  #bg-video{
+    position:fixed;top:0;left:0;width:100%;height:100%;
+    object-fit:cover;z-index:-1;filter:brightness(0.6);
   }
 
-  header {
-    text-align:center;
-    padding:3rem 1rem;
+  header{
+    text-align:center;padding:3rem 1rem;
     background:rgba(0,0,0,0.4);
   }
-  header img {width:120px; margin-bottom:1rem;}
-  header h1 {font-size:3rem; margin-bottom:0.5rem; color:#FFD700;}
-  header p {font-size:1.3rem; color:#FF8C00;}
+  header img{width:120px;margin-bottom:1rem;}
+  header h1{font-size:3rem;margin-bottom:0.5rem;color:#FFD700;}
+  header p{font-size:1.3rem;color:#FF8C00;}
 
-  nav {
-    display:flex; justify-content:center; gap:2rem;
-    padding:1rem 0; background:rgba(0,0,0,0.5);
+  nav{
+    display:flex;justify-content:center;gap:2rem;
+    padding:1rem 0;background:rgba(0,0,0,0.5);
   }
-  nav a {color:#fff; text-decoration:none; font-weight:600; transition:0.3s;}
-  nav a:hover {color:#FF6347;}
+  nav a{color:#fff;text-decoration:none;font-weight:600;transition:0.3s;}
+  nav a:hover{color:#FF6347;}
 
-  section {padding:5rem 1rem; max-width:1000px; margin:auto; background:rgba(0,0,0,0.4); border-radius:12px; margin-bottom:2rem;}
-  .intro {text-align:center; margin-bottom:3rem;}
-  .intro h2 {font-size:2.5rem; margin-bottom:1rem; color:#FFA500;}
-  .intro p {font-size:1.2rem; color:#FFF8DC;}
+  section{padding:5rem 1rem;max-width:1000px;margin:auto;background:rgba(0,0,0,0.4);border-radius:12px;margin-bottom:2rem;}
+  .intro{text-align:center;margin-bottom:3rem;}
+  .intro h2{font-size:2.5rem;margin-bottom:1rem;color:#FFA500;}
+  .intro p{font-size:1.2rem;color:#FFF8DC;}
 
-  .gallery {
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem;
+  .gallery{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;
   }
-  .gallery img {
-    width:100%; border-radius:12px; transition: transform 0.3s; border: 4px solid #FFD700;
-  }
-  .gallery img:hover {transform: scale(1.05); border-color:#FF8C00;}
+  .gallery img{width:100%;border-radius:12px;transition:transform 0.3s;border:4px solid #FFD700;}
+  .gallery img:hover{transform:scale(1.05);border-color:#FF8C00;}
 
-  .contact-info {text-align:center; margin-top:1.5rem;}
-  .contact-info a {color:#FFD700; text-decoration:none; font-weight:600;}
-  
-  footer {text-align:center; padding:2rem 1rem; background:rgba(0,0,0,0.6);}
-  footer p {font-size:0.9rem; color:#fff;}
+  .contact-info{text-align:center;margin-top:1.5rem;}
+  .contact-info a{color:#FFD700;text-decoration:none;font-weight:600;}
+
+  footer{text-align:center;padding:2rem 1rem;background:rgba(0,0,0,0.6);}
+  footer p{font-size:0.9rem;color:#fff;}
 </style>
 </head>
 <body>
 
-  <!-- Video de fondo -->
+  <!-- Video de fondo artístico -->
   <video autoplay muted loop id="bg-video">
-    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    <source src="https://cdn.pixabay.com/vimeo/38653/paint-38653.mp4?width=1280&amp;hash=3c1d1c9776ad" type="video/mp4">
     Tu navegador no soporta video de fondo.
   </video>
 
   <header>
-    <!-- Reemplaza el src con tu logo PNG transparente -->
-    <img src="https://via.placeholder.com/150x150.png?text=LOGO+PNG" alt="ttps://github.com/vidabevaarte5-rgb/vidaveba/blob/main/WhatsApp%20Image%202026-03-05%20at%203.24.05%20PM.jpeg?raw=true">
+    <!-- Logo desde tu repositorio -->
+    <img src="https://github.com/vidabevaarte5-rgb/vidaveba/blob/main/WhatsApp%20Image%202026-03-05%20at%203.24.05%20PM.jpeg?raw=true" alt="Logo VIDABEVA.arte">
     <h1>VIDABEVA.arte</h1>
     <p>Retratos personalizados 100% hechos a mano en pintura acrílica</p>
   </header>
@@ -80,13 +73,13 @@
   <section id="about" class="intro">
     <h2>Sobre VIDABEVA.arte</h2>
     <p>
-      Realizamos retratos de mascotas, personas y más. Cada obra es única, personalizada y 100% hecha a mano usando pintura acrílica. 
-      Nuestro objetivo es capturar la esencia de tus recuerdos y transformarlos en arte que llene de vida tu hogar.
+      Realizamos retratos de mascotas, personas y más. Cada obra es única, personalizada y 100% hecha a mano usando pintura acrílica.
+      Capturamos la esencia de tus recuerdos y los transformamos en arte que llena de vida tu hogar.
     </p>
   </section>
 
   <section id="gallery">
-    <h2 style="text-align:center; margin-bottom:2rem;">Galería de Obras</h2>
+    <h2 style="text-align:center;margin-bottom:2rem;">Galería de Obras</h2>
     <div class="gallery">
       <img src="https://via.placeholder.com/400x400.png?text=Mascota+1" alt="Cuadro de mascota">
       <img src="https://via.placeholder.com/400x400.png?text=Persona+1" alt="Retrato personalizado">
@@ -98,7 +91,7 @@
   </section>
 
   <section id="contact">
-    <h2 style="text-align:center; margin-bottom:1rem;">Contacto</h2>
+    <h2 style="text-align:center;margin-bottom:1rem;">Contacto</h2>
     <div class="contact-info">
       <p>Instagram: <a href="https://instagram.com/vidabeva.arte.ofi" target="_blank">@vidabeva.arte.ofi</a></p>
       <p>Facebook: <a href="https://www.facebook.com/VIDABEVA.arte" target="_blank">VIDABEVA.arte</a></p>
